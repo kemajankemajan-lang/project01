@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Green Leaf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="container nav-wrap">
+      <a href="project01.html" class="logo">
+        <span class="logo-icon">🍃</span>
+        <span>Green Leaf</span>
+      </a>
+      <nav class="nav-links">
+        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="admin.html" data-i18n="navAdmin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-i18n="bookTable">Book a Table</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="contactPageTag">Contact</p>
+        <h1 data-i18n="contactHeroTitle">We would love to hear from you</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-details reveal">
+          <h3 data-i18n="contactGetInTouch">Get in Touch</h3>
+          <p><strong data-i18n="contactAddressLabel">Address:</strong> 21 Green Avenue, Downtown</p>
+          <p><strong data-i18n="contactPhoneLabel">Phone:</strong> +1 (555) 123-4567</p>
+          <p><strong data-i18n="contactEmailLabel">Email:</strong> info@greenleaf.com</p>
+          <p><strong data-i18n="contactHoursLabel">Hours:</strong> Mon-Sun 11:00 AM - 10:00 PM</p>
+          <div class="social-links">
+            <a href="#" data-i18n="contactSocialInstagram">Instagram</a>
+            <a href="#" data-i18n="contactSocialFacebook">Facebook</a>
+            <a href="#" data-i18n="contactSocialWhatsApp">WhatsApp</a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="reservationForm">
+          <input type="text" data-i18n-placeholder="contactFormNamePlaceholder" placeholder="Your Name" required />
+          <input type="email" data-i18n-placeholder="contactFormEmailPlaceholder" placeholder="Your Email" required />
+          <input type="tel" data-i18n-placeholder="contactFormPhonePlaceholder" placeholder="Phone Number" required />
+          <select required>
+            <option value="" data-i18n="contactFormOccasionPlaceholder">Select Occasion</option>
+            <option data-i18n="contactOccasionBirthday">Birthday</option>
+            <option data-i18n="contactOccasionAnniversary">Anniversary</option>
+            <option data-i18n="contactOccasionBusiness">Business Dinner</option>
+            <option data-i18n="contactOccasionCasual">Casual Lunch</option>
+          </select>
+          <input type="date" required />
+          <input type="time" required />
+          <input type="number" min="1" max="10" data-i18n-placeholder="contactGuestsPlaceholder" placeholder="Number of Guests" required />
+          <textarea rows="4" data-i18n-placeholder="contactRequestsPlaceholder" placeholder="Special Requests"></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="reserveButton">Reserve Table</button>
+          <p class="form-message" id="reservationMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Green Leaf</h3>
+        <p data-i18n="footerText">Fresh food, warm service, and unforgettable moments.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@greenleaf.com</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerFollow">Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

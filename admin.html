@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="container nav-wrap">
+      <a href="project01.html" class="logo">
+        <span class="logo-icon">🍃</span>
+        <span>Green Leaf</span>
+      </a>
+      <nav class="nav-links">
+        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="admin.html" data-i18n="navAdmin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <a href="project01.html" class="btn btn-secondary" data-i18n="logoutButton">Logout</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section admin-section">
+      <div class="container">
+        <div id="adminAccess" class="admin-access-card reveal">
+          <h2>Admin Access</h2>
+          <p>Enter the password to open the dashboard.</p>
+          <form id="adminPasswordForm" class="admin-form">
+            <input id="adminPasswordInput" type="password" placeholder="Password" required />
+            <button type="submit" class="btn btn-primary">Unlock Dashboard</button>
+            <p id="adminPasswordMessage" class="form-message"></p>
+          </form>
+        </div>
+
+        <div id="adminDashboardContent" class="admin-protected" style="display:none;">
+        <div class="admin-top reveal">
+          <div>
+            <p class="eyebrow" data-i18n="adminDashboardTag">Admin Dashboard</p>
+            <h2 data-i18n="adminDashboardTitle">Restaurant Overview</h2>
+          </div>
+          <a href="contact.html" class="btn btn-primary" data-i18n="viewReservations">View Reservations</a>
+        </div>
+        <div class="admin-stats reveal">
+          <div class="stat-card">
+            <span data-i18n="todayBookings">Today’s Bookings</span>
+            <strong>24</strong>
+            <small>+8% from yesterday</small>
+          </div>
+          <div class="stat-card">
+            <span data-i18n="pendingOrders">Pending Orders</span>
+            <strong>12</strong>
+            <small>5 need confirmation</small>
+          </div>
+          <div class="stat-card">
+            <span data-i18n="customerRating">Customer Rating</span>
+            <strong>4.9</strong>
+            <small>Based on 128 reviews</small>
+          </div>
+          <div class="stat-card">
+            <span data-i18n="revenue">Revenue</span>
+            <strong>LKR 1,044,000</strong>
+            <small>This week</small>
+          </div>
+        </div>
+        <div class="admin-grid">
+          <aside class="admin-sidebar reveal">
+            <h3 data-i18n="adminPanelTitle">Admin Panel</h3>
+            <a href="#" class="active" data-i18n="dashboardLink">Dashboard</a>
+            <a href="#" data-i18n="menuEditorLink">Menu Editor</a>
+            <a href="#" data-i18n="offersLink">Offers</a>
+            <a href="#" data-i18n="customersLink">Customers</a>
+            <a href="#" data-i18n="reportsLink">Reports</a>
+          </aside>
+          <div class="admin-content">
+            <div class="admin-card reveal">
+              <div class="card-head">
+                <h3 data-i18n="updateMenuTitle">Update Menu</h3>
+                <span data-i18n="lastSaved">Last saved 10 mins ago</span>
+              </div>
+              <form class="admin-form">
+                <input type="text" data-i18n-placeholder="dishNamePlaceholder" placeholder="Dish Name" />
+                <select>
+                  <option data-i18n="categoryAppetizer">Appetizer</option>
+                  <option data-i18n="categoryMainCourse">Main Course</option>
+                  <option data-i18n="categoryDessert">Dessert</option>
+                  <option data-i18n="categoryDrink">Drink</option>
+                </select>
+                <input type="number" data-i18n-placeholder="pricePlaceholder" placeholder="Price" />
+                <button type="submit" class="btn btn-primary" data-i18n="saveItemButton">Save Item</button>
+              </form>
+            </div>
+            <div class="admin-card reveal">
+              <div class="card-head">
+                <h3 data-i18n="specialOffersTitle">Special Offers</h3>
+                <span data-i18n="activeOffers">3 active offers</span>
+              </div>
+              <form class="admin-form">
+                <input type="text" data-i18n-placeholder="offerTitlePlaceholder" placeholder="Offer Title" />
+                <input type="text" data-i18n-placeholder="discountPlaceholder" placeholder="Discount" />
+                <button type="submit" class="btn btn-primary" data-i18n="publishOfferButton">Publish Offer</button>
+              </form>
+            </div>
+            <div class="admin-card reveal">
+              <div class="card-head">
+                <h3 data-i18n="feedbackTitle">Customer Feedback</h3>
+                <span data-i18n="topRated">Top rated today</span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <tr><th data-i18n="tableName">Name</th><th data-i18n="tableFeedback">Feedback</th><th data-i18n="tableRating">Rating</th></tr>
+                  <tr><td>Sarah</td><td>Great service</td><td>5/5</td></tr>
+                  <tr><td>Daniel</td><td>Lovely atmosphere</td><td>4.8/5</td></tr>
+                  <tr><td>Emily</td><td>Food was fresh and fast</td><td>4.9/5</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Leaf Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="container nav-wrap">
+      <a href="project01.html" class="logo">
+        <span class="logo-icon">🍃</span>
+        <span>Green Leaf</span>
+      </a>
+      <nav class="nav-links">
+        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="admin.html" data-i18n="navAdmin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-i18n="bookTable">Book a Table</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="heroTag">Fresh • Local • Delicious</p>
+          <h1 data-i18n="heroTitle">A Taste of Nature in Every Bite</h1>
+          <p class="hero-text" data-i18n="heroText">Enjoy handcrafted dishes, seasonal ingredients, and unforgettable dining experiences at Green Leaf Restaurant.</p>
+          <div class="hero-actions">
+            <a href="menu.html" class="btn btn-primary" data-i18n="exploreMenu">Explore Menu</a>
+            <a href="contact.html" class="btn btn-secondary" data-i18n="contactUs">Contact Us</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <strong>4.9</strong>
+              <span data-i18n="rating">Customer Rating</span>
+            </div>
+            <div>
+              <strong>300+</strong>
+              <span data-i18n="served">Daily Guests</span>
+            </div>
+            <div>
+              <strong>15+</strong>
+              <span data-i18n="years">Years of Service</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Restaurant dining" />
+          <div class="hero-card-info">
+            <h3 data-i18n="todaySpecial">Today’s Special</h3>
+            <p data-i18n="specialDish">Garden Herb Pasta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-strip">
+      <div class="container info-grid">
+        <div>
+          <span>📍</span>
+          <p data-i18n="visitUs">Visit us at 21 Green Avenue</p>
+        </div>
+        <div>
+          <span>🕒</span>
+          <p data-i18n="hoursInfo">Open Daily · 11:00 AM - 10:00 PM</p>
+        </div>
+        <div>
+          <span>📞</span>
+          <p>+1 (555) 123-4567</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-header">
+        <p class="eyebrow" data-i18n="aboutPreviewTag">Our Story</p>
+        <h2 data-i18n="aboutPreviewTitle">Why Guests Love Green Leaf</h2>
+      </div>
+      <div class="container about-preview-grid">
+        <div>
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant ambience" />
+        </div>
+        <div>
+          <p data-i18n="aboutPreviewText">Green Leaf is a modern dining destination where fresh ingredients, creative flavors, and warm hospitality come together for a memorable meal.</p>
+          <ul class="feature-list">
+            <li data-i18n="feature1">Seasonal menu crafted by expert chefs</li>
+            <li data-i18n="feature2">Comfortable indoor and outdoor seating</li>
+            <li data-i18n="feature3">Fast delivery and friendly customer service</li>
+          </ul>
+          <a href="about.html" class="btn btn-primary" data-i18n="learnMore">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container section-header">
+        <p class="eyebrow" data-i18n="offersTag">Special Offers</p>
+        <h2 data-i18n="offersTitle">Today’s Best Deals</h2>
+      </div>
+      <div class="container offer-grid">
+        <div class="offer-card">
+          <h3 data-i18n="offer1Title">Lunch Combo</h3>
+          <p data-i18n="offer1Text">Starter + Main + Drink</p>
+          <span>15% OFF</span>
+        </div>
+        <div class="offer-card accent">
+          <h3 data-i18n="offer2Title">Weekend Feast</h3>
+          <p data-i18n="offer2Text">Family platter for 4 guests</p>
+          <span>20% OFF</span>
+        </div>
+        <div class="offer-card">
+          <h3 data-i18n="offer3Title">Happy Hour</h3>
+          <p data-i18n="offer3Text">2-for-1 mocktails after 6 PM</p>
+          <span data-i18n="offer3Badge">Limited Time</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section-header">
+        <p class="eyebrow" data-i18n="featuredMenuTag">Featured Menu</p>
+        <h2 data-i18n="featuredMenuTitle">Popular Sri Lankan Favorites</h2>
+      </div>
+      <div class="container menu-preview-grid">
+        <article class="menu-card">
+          <img class="food-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Egg Hoppers with Lunu Miris" />
+          <div>
+            <h3 data-i18n="homeDish1Title">Egg Hoppers with Lunu Miris</h3>
+            <p data-i18n="homeDish1Text">Soft hoppers served with spicy coconut relish.</p>
+            <span>LKR 1,850</span>
+          </div>
+        </article>
+        <article class="menu-card">
+          <img class="food-image" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Chicken Kottu Roti" />
+          <div>
+            <h3 data-i18n="homeDish2Title">Chicken Kottu Roti</h3>
+            <p data-i18n="homeDish2Text">Chopped roti tossed with spices, egg, and chicken.</p>
+            <span>LKR 2,400</span>
+          </div>
+        </article>
+        <article class="menu-card">
+          <img class="food-image" src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" alt="King Coconut Cooler" />
+          <div>
+            <h3 data-i18n="homeDish3Title">King Coconut Cooler</h3>
+            <p data-i18n="homeDish3Text">A refreshing coconut drink with lime and mint.</p>
+            <span>LKR 950</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt testimonials">
+      <div class="container section-header">
+        <p class="eyebrow" data-i18n="testimonialsTag">Testimonials</p>
+        <h2 data-i18n="testimonialsTitle">What Our Guests Say</h2>
+      </div>
+      <div class="container testimonial-grid">
+        <div class="testimonial-card">
+          <p>“The food was fresh, flavorful, and beautifully presented. A perfect dinner spot!”</p>
+          <h4>Sarah M.</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>“Amazing service and a cozy atmosphere. The staff truly made us feel welcome.”</p>
+          <h4>Daniel K.</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>“The menu has something for everyone, and the prices are reasonable for the quality.”</p>
+          <h4>Emily R.</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="section review-section">
+      <div class="container review-grid">
+        <div class="review-form-card reveal">
+          <p class="eyebrow" data-i18n="reviewSectionTag">Customer Review Collection</p>
+          <h2 data-i18n="reviewSectionTitle">Share Your Experience</h2>
+          <p data-i18n="reviewSectionText">Tell us about your favorite Sri Lankan dish and help us improve our service.</p>
+          <form id="reviewForm" class="contact-form">
+            <input id="reviewName" type="text" data-i18n-placeholder="reviewFormNamePlaceholder" placeholder="Your Name" required />
+            <select id="reviewRating" required>
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★☆</option>
+              <option value="3">★★★☆☆</option>
+              <option value="2">★★☆☆☆</option>
+              <option value="1">★☆☆☆☆</option>
+            </select>
+            <textarea id="reviewMessage" rows="4" data-i18n-placeholder="reviewFormMessagePlaceholder" placeholder="Write your review" required></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="reviewFormSubmitButton">Submit Review</button>
+            <p class="form-message" id="reviewFeedbackMessage"></p>
+          </form>
+        </div>
+        <div class="review-list-card reveal">
+          <h3 data-i18n="recentReviews">Recent Reviews</h3>
+          <div id="reviewList" class="review-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Green Leaf</h3>
+        <p data-i18n="footerText">Fresh food, warm service, and unforgettable moments.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@greenleaf.com</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerFollow">Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Leaf Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="container nav-wrap">
+      <a href="project01.html" class="logo">
+        <span class="logo-icon">🍃</span>
+        <span>Green Leaf</span>
+      </a>
+      <nav class="nav-links">
+        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="admin.html" data-i18n="navAdmin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-i18n="bookTable">Book a Table</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="menuPageTag">Menu</p>
+        <h1 data-i18n="menuHeroTitle">Delicious choices for every craving</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="menu-filter">
+          <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+          <button class="filter-btn" data-filter="appetizers" data-i18n="filterAppetizers">Appetizers</button>
+          <button class="filter-btn" data-filter="main" data-i18n="filterMainCourse">Main Course</button>
+          <button class="filter-btn" data-filter="desserts" data-i18n="filterDesserts">Desserts</button>
+          <button class="filter-btn" data-filter="drinks" data-i18n="filterDrinks">Drinks</button>
+        </div>
+
+        <div class="menu-items-grid">
+          <article class="menu-item-card" data-category="appetizers">
+            <img class="food-image" src="img/img1.webp" alt="Kiribath with Lunu Miris" />
+            <div>
+              <h3 data-i18n="menuItem1Title">Kiribath with Lunu Miris</h3>
+              <p data-i18n="menuItem1Desc">Creamy rice milk dish served with spicy onion relish.</p>
+              <div class="item-meta"><span>LKR 1,450</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+          <article class="menu-item-card" data-category="main">
+            <img class="food-image" src="img/img2.webp" alt="Chicken Kottu Roti" />
+            <div>
+              <h3 data-i18n="menuItem2Title">Chicken Kottu Roti</h3>
+              <p data-i18n="menuItem2Desc">Chopped roti tossed with spices, egg, and chicken.</p>
+              <div class="item-meta"><span>LKR 2,400</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+          <article class="menu-item-card" data-category="main">
+            <img class="food-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Fish Ambul Thiyal" />
+            <div>
+              <h3 data-i18n="menuItem3Title">Fish Ambul Thiyal</h3>
+              <p data-i18n="menuItem3Desc">Tangy sour fish curry with traditional spices.</p>
+              <div class="item-meta"><span>LKR 2,900</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+          <article class="menu-item-card" data-category="desserts">
+            <img class="food-image" src="img/img4.avif" alt="Watalappan" />
+            <div>
+              <h3 data-i18n="menuItem4Title">Watalappan</h3>
+              <p data-i18n="menuItem4Desc">A rich coconut milk pudding with cardamom and caramel.</p>
+              <div class="item-meta"><span>LKR 1,200</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+          <article class="menu-item-card" data-category="drinks">
+            <img class="food-image" src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" alt="King Coconut Cooler" />
+            <div>
+              <h3 data-i18n="menuItem5Title">King Coconut Cooler</h3>
+              <p data-i18n="menuItem5Desc">Fresh king coconut served chilled with lime.</p>
+              <div class="item-meta"><span>LKR 950</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+          <article class="menu-item-card" data-category="main">
+            <img class="food-image" src="img/img3.jpeg" alt="String Hoppers with Curry" />
+            <div>
+              <h3 data-i18n="menuItem6Title">String Hoppers with Curry</h3>
+              <p data-i18n="menuItem6Desc">Light rice noodles served with a fragrant curry.</p>
+              <div class="item-meta"><span>LKR 1,800</span><button data-i18n="orderButton">Order</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Green Leaf</h3>
+        <p data-i18n="footerText">Fresh food, warm service, and unforgettable moments.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@greenleaf.com</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerFollow">Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

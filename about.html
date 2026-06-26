@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Green Leaf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top-header">
+    <div class="container nav-wrap">
+      <a href="project01.html" class="logo">
+        <span class="logo-icon">🍃</span>
+        <span>Green Leaf</span>
+      </a>
+      <nav class="nav-links">
+        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="menu.html" data-i18n="navMenu">Menu</a>
+        <a href="about.html" data-i18n="navAbout">About</a>
+        <a href="contact.html" data-i18n="navContact">Contact</a>
+        <a href="admin.html" data-i18n="navAdmin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">English</button>
+          <button class="lang-btn" data-lang="ta">தமிழ்</button>
+          <button class="lang-btn" data-lang="si">සිංහල</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary" data-i18n="bookTable">Book a Table</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="aboutPageTag">About Us</p>
+        <h1 data-i18n="aboutPageHeroTitle">Fresh flavors, warm hospitality</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-story-grid">
+        <div>
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant interior" />
+        </div>
+        <div>
+          <h2 data-i18n="aboutStoryHeading">Our Story</h2>
+          <p data-i18n="aboutStoryText1">Green Leaf Restaurant began with a simple mission: to serve healthy, wholesome meals made from locally sourced ingredients. Today, we continue to deliver quality food in a warm and inviting atmosphere.</p>
+          <p data-i18n="aboutStoryText2">We combine traditional cooking methods with modern presentation to bring fresh flavors to every plate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container values-grid">
+        <div class="value-card">
+          <h3 data-i18n="value1Title">Quality Ingredients</h3>
+          <p data-i18n="value1Text">Only the freshest vegetables, meats, and spices are selected daily.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-i18n="value2Title">Customer Care</h3>
+          <p data-i18n="value2Text">We prioritize fast service, clear communication, and memorable dining.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-i18n="value3Title">Healthy Dining</h3>
+          <p data-i18n="value3Text">Every dish is designed to balance nutrition, taste, and satisfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container gallery-grid">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Chef preparing food" />
+        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=600&q=80" alt="Dining table" />
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80" alt="Restaurant table set" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Green Leaf</h3>
+        <p data-i18n="footerText">Fresh food, warm service, and unforgettable moments.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@greenleaf.com</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerFollow">Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
