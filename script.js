@@ -435,6 +435,11 @@ const translations = {
 const langButtons = document.querySelectorAll('.lang-btn');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const themeToggle = document.querySelector('.theme-toggle');
+const pageHeader = document.querySelector('.top-header');
+const sliderButtons = document.querySelectorAll('.slider-btn');
+const sliderDots = document.querySelectorAll('.slider-dot');
+const slides = document.querySelectorAll('.dish-slide');
 const reservationForm = document.getElementById('reservationForm');
 const reservationMessage = document.getElementById('reservationMessage');
 const reviewForm = document.getElementById('reviewForm');
@@ -495,11 +500,35 @@ function getStoredLanguage() {
   }
 }
 
+function getStoredTheme() {
+  try {
+    return localStorage.getItem('greenLeafTheme') || 'light';
+  } catch (error) {
+    return 'light';
+  }
+}
+
 function saveLanguage(lang) {
   try {
     localStorage.setItem('greenLeafLang', lang);
   } catch (error) {
     // Ignore storage errors and continue with in-memory state
+  }
+}
+
+function setTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  if (themeToggle) {
+    const icon = themeToggle.querySelector('.theme-toggle-icon');
+    if (icon) {
+      icon.textContent = isDark ? '☀️' : '🌙';
+    }
+  }
+  try {
+    localStorage.setItem('greenLeafTheme', theme);
+  } catch (error) {
+    // Ignore storage errors and continue
   }
 }
 
@@ -544,6 +573,13 @@ langButtons.forEach((button) => {
   });
 });
 
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    setTheme(nextTheme);
+  });
+}
+
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
@@ -555,6 +591,36 @@ if (menuToggle && navLinks) {
     });
   });
 }
+
+let activeSlide = 0;
+
+function showSlide(index) {
+  if (!slides.length) return;
+  activeSlide = (index + slides.length) % slides.length;
+  slides.forEach((slide, slideIndex) => {
+    slide.classList.toggle('active', slideIndex === activeSlide);
+  });
+  sliderDots.forEach((dot, dotIndex) => {
+    dot.classList.toggle('active', dotIndex === activeSlide);
+  });
+}
+
+sliderButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const direction = Number(button.dataset.direction || 1);
+    showSlide(activeSlide + direction);
+  });
+});
+
+sliderDots.forEach((dot) => {
+  dot.addEventListener('click', () => {
+    showSlide(Number(dot.dataset.slide || 0));
+  });
+});
+
+setInterval(() => {
+  showSlide(activeSlide + 1);
+}, 5000);
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-item-card');
@@ -623,6 +689,11 @@ if (adminPasswordForm && adminPasswordInput && adminPasswordMessage && adminAcce
   });
 }
 
+function updateHeaderShrink() {
+  if (!pageHeader) return;
+  pageHeader.classList.toggle('shrink', window.scrollY > 24);
+}
+
 function revealOnScroll() {
   document.querySelectorAll('.reveal').forEach((section) => {
     const rect = section.getBoundingClientRect();
@@ -632,9 +703,17 @@ function revealOnScroll() {
   });
 }
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+window.addEventListener('scroll', () => {
+  updateHeaderShrink();
+  revealOnScroll();
+});
+window.addEventListener('load', () => {
+  updateHeaderShrink();
+  revealOnScroll();
+});
 
 currentLang = getStoredLanguage();
 setLanguage(currentLang);
+setTheme(getStoredTheme());
+showSlide(0);
 renderReviews();

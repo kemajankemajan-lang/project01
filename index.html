@@ -12,12 +12,12 @@
 <body>
   <header class="top-header">
     <div class="container nav-wrap">
-      <a href="project01.html" class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-icon">🍃</span>
         <span>Green Leaf</span>
       </a>
       <nav class="nav-links">
-        <a href="project01.html" data-i18n="navHome">Home</a>
+        <a href="index.html" data-i18n="navHome">Home</a>
         <a href="menu.html" data-i18n="navMenu">Menu</a>
         <a href="about.html" data-i18n="navAbout">About</a>
         <a href="contact.html" data-i18n="navContact">Contact</a>
@@ -29,6 +29,9 @@
           <button class="lang-btn" data-lang="ta">தமிழ்</button>
           <button class="lang-btn" data-lang="si">සිංහල</button>
         </div>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon">🌙</span>
+        </button>
         <a href="contact.html" class="btn btn-primary" data-i18n="bookTable">Book a Table</a>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       </div>
@@ -66,6 +69,30 @@
           <div class="hero-card-info">
             <h3 data-i18n="todaySpecial">Today’s Special</h3>
             <p data-i18n="specialDish">Garden Herb Pasta</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section brand-section reveal">
+      <div class="container brand-grid">
+        <div class="brand-intro">
+          <p class="eyebrow">Signature Dining</p>
+          <h2>Green Leaf Dining Co.</h2>
+          <p>Elegant farm-to-table cuisine, polished hospitality, and thoughtfully crafted experiences for every celebration.</p>
+          <div class="brand-badges">
+            <span>★ Awarded for excellence</span>
+            <span>🥗 Seasonal menus</span>
+            <span>🧑‍🍳 Chef-led service</span>
+          </div>
+        </div>
+        <div class="brand-card">
+          <div class="brand-badge">
+            <span>GL</span>
+          </div>
+          <div>
+            <h3>Crafted with intention</h3>
+            <p>From intimate dinners to large gatherings, every detail is designed to feel refined, welcoming, and memorable.</p>
           </div>
         </div>
       </div>
@@ -109,7 +136,7 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt reveal">
       <div class="container section-header">
         <p class="eyebrow" data-i18n="offersTag">Special Offers</p>
         <h2 data-i18n="offersTitle">Today’s Best Deals</h2>
@@ -133,40 +160,54 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="container section-header">
         <p class="eyebrow" data-i18n="featuredMenuTag">Featured Menu</p>
         <h2 data-i18n="featuredMenuTitle">Popular Sri Lankan Favorites</h2>
       </div>
-      <div class="container menu-preview-grid">
-        <article class="menu-card">
-          <img class="food-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Egg Hoppers with Lunu Miris" />
-          <div>
-            <h3 data-i18n="homeDish1Title">Egg Hoppers with Lunu Miris</h3>
-            <p data-i18n="homeDish1Text">Soft hoppers served with spicy coconut relish.</p>
-            <span>LKR 1,850</span>
+      <div class="container slider-shell reveal">
+        <div class="slider-header">
+          <p>Chef’s favorites this week</p>
+          <div class="slider-controls">
+            <button class="slider-btn" data-direction="-1" aria-label="Previous dish">←</button>
+            <button class="slider-btn" data-direction="1" aria-label="Next dish">→</button>
           </div>
-        </article>
-        <article class="menu-card">
-          <img class="food-image" src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Chicken Kottu Roti" />
-          <div>
-            <h3 data-i18n="homeDish2Title">Chicken Kottu Roti</h3>
-            <p data-i18n="homeDish2Text">Chopped roti tossed with spices, egg, and chicken.</p>
-            <span>LKR 2,400</span>
-          </div>
-        </article>
-        <article class="menu-card">
-          <img class="food-image" src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" alt="King Coconut Cooler" />
-          <div>
-            <h3 data-i18n="homeDish3Title">King Coconut Cooler</h3>
-            <p data-i18n="homeDish3Text">A refreshing coconut drink with lime and mint.</p>
-            <span>LKR 950</span>
-          </div>
-        </article>
+        </div>
+        <div class="dish-slider">
+          <article class="dish-slide active">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Egg Hoppers with Lunu Miris" />
+            <div class="dish-slide-content">
+              <h3 data-i18n="homeDish1Title">Egg Hoppers with Lunu Miris</h3>
+              <p data-i18n="homeDish1Text">Soft hoppers served with spicy coconut relish.</p>
+              <span>LKR 1,850</span>
+            </div>
+          </article>
+          <article class="dish-slide">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Chicken Kottu Roti" />
+            <div class="dish-slide-content">
+              <h3 data-i18n="homeDish2Title">Chicken Kottu Roti</h3>
+              <p data-i18n="homeDish2Text">Chopped roti tossed with spices, egg, and chicken.</p>
+              <span>LKR 2,400</span>
+            </div>
+          </article>
+          <article class="dish-slide">
+            <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=800&q=80" alt="King Coconut Cooler" />
+            <div class="dish-slide-content">
+              <h3 data-i18n="homeDish3Title">King Coconut Cooler</h3>
+              <p data-i18n="homeDish3Text">A refreshing coconut drink with lime and mint.</p>
+              <span>LKR 950</span>
+            </div>
+          </article>
+        </div>
+        <div class="slider-dots" aria-label="Featured dish navigation">
+          <button class="slider-dot active" data-slide="0" aria-label="Show first featured dish"></button>
+          <button class="slider-dot" data-slide="1" aria-label="Show second featured dish"></button>
+          <button class="slider-dot" data-slide="2" aria-label="Show third featured dish"></button>
+        </div>
       </div>
     </section>
 
-    <section class="section section-alt testimonials">
+    <section class="section section-alt testimonials reveal">
       <div class="container section-header">
         <p class="eyebrow" data-i18n="testimonialsTag">Testimonials</p>
         <h2 data-i18n="testimonialsTitle">What Our Guests Say</h2>
@@ -187,7 +228,7 @@
       </div>
     </section>
 
-    <section class="section review-section">
+    <section class="section review-section reveal">
       <div class="container review-grid">
         <div class="review-form-card reveal">
           <p class="eyebrow" data-i18n="reviewSectionTag">Customer Review Collection</p>
