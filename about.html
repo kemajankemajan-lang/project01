@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="about-page">
   <header class="top-header">
     <div class="container nav-wrap">
       <a href="index.html" class="logo">
@@ -48,30 +48,66 @@
 
     <section class="section">
       <div class="container about-story-grid">
-        <div>
+        <div class="depth-layer">
           <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Restaurant interior" />
         </div>
-        <div>
+        <div class="depth-layer story-text">
           <h2 data-i18n="aboutStoryHeading">Our Story</h2>
-          <p data-i18n="aboutStoryText1">Green Leaf Restaurant began with a simple mission: to serve healthy, wholesome meals made from locally sourced ingredients. Today, we continue to deliver quality food in a warm and inviting atmosphere.</p>
-          <p data-i18n="aboutStoryText2">We combine traditional cooking methods with modern presentation to bring fresh flavors to every plate.</p>
+          <p class="lead">Founded on a passion for seasonal ingredients and thoughtful hospitality, Green Leaf brings elevated comfort food to every table. We work with local farmers and suppliers to ensure freshness, sustainability, and exceptional flavor.</p>
+          <p>Our kitchen blends time-honored techniques with contemporary plating, producing dishes that are vibrant, balanced, and made to share. We believe great food brings people together — that's the heart of our approach.</p>
+          <p class="muted">Visit us to experience a relaxed atmosphere, attentive service, and menus that change with the seasons.</p>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container values-grid">
-        <div class="value-card">
+        <div class="value-card depth-layer">
           <h3 data-i18n="value1Title">Quality Ingredients</h3>
           <p data-i18n="value1Text">Only the freshest vegetables, meats, and spices are selected daily.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card depth-layer">
           <h3 data-i18n="value2Title">Customer Care</h3>
           <p data-i18n="value2Text">We prioritize fast service, clear communication, and memorable dining.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card depth-layer">
           <h3 data-i18n="value3Title">Healthy Dining</h3>
           <p data-i18n="value3Text">Every dish is designed to balance nutrition, taste, and satisfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section">
+      <div class="container">
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <h4>Chef Anaya Perera</h4>
+            <p class="muted">Executive Chef</p>
+            <ul class="team-qualifications">
+              <li>Le Cordon Bleu diploma</li>
+              <li>15 years of fine dining experience</li>
+              <li>Expert in seasonal and sustainable menu development</li>
+            </ul>
+          </div>
+          <div class="team-card">
+            <h4>Priyan Silva</h4>
+            <p class="muted">General Manager</p>
+            <ul class="team-qualifications">
+              <li>Bachelor’s in Hospitality Management</li>
+              <li>10 years running high-end restaurant operations</li>
+              <li>Specialist in guest service and team leadership</li>
+            </ul>
+          </div>
+          <div class="team-card">
+            <h4>Savitha Jayasuriya</h4>
+            <p class="muted">Beverage Director</p>
+            <ul class="team-qualifications">
+              <li>Certified sommelier</li>
+              <li>Expert in wine pairing and craft cocktails</li>
+              <li>Curates seasonal beverage programs</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

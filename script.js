@@ -689,6 +689,8 @@ if (adminPasswordForm && adminPasswordInput && adminPasswordMessage && adminAcce
   });
 }
 
+let isTicking = false;
+
 function updateHeaderShrink() {
   if (!pageHeader) return;
   pageHeader.classList.toggle('shrink', window.scrollY > 24);
@@ -703,13 +705,37 @@ function revealOnScroll() {
   });
 }
 
+function updateAboutDepth() {
+  const depthLayers = document.querySelectorAll('.about-page .depth-layer');
+  if (!depthLayers.length) return;
+
+  const scrollFraction = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  const maxZ = 24;
+  const baseZ = 4;
+
+  depthLayers.forEach((layer, index) => {
+    const depthOffset = baseZ + index * 8 + scrollFraction * maxZ;
+    const rotation = (scrollFraction - 0.45) * 1.6;
+    layer.style.transform = `translateZ(${depthOffset}px) rotateX(${rotation}deg)`;
+  });
+}
+
 window.addEventListener('scroll', () => {
-  updateHeaderShrink();
-  revealOnScroll();
-});
+  if (!isTicking) {
+    window.requestAnimationFrame(() => {
+      updateHeaderShrink();
+      revealOnScroll();
+      updateAboutDepth();
+      isTicking = false;
+    });
+    isTicking = true;
+  }
+}, { passive: true });
+
 window.addEventListener('load', () => {
   updateHeaderShrink();
   revealOnScroll();
+  updateAboutDepth();
 });
 
 currentLang = getStoredLanguage();
